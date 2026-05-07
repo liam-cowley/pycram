@@ -12,10 +12,10 @@ RUN pip install --requirement ${PYCRAM_WS}/src/pycram/binder/requirements.txt --
 COPY --chown=${NB_USER}:users binder/me ${PYCRAM_WS}/src/me
 
 USER root
-RUN apt-get update
-
-# RUN apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-key F42ED6FBAB17C654
 # RUN apt-get update
+
+RUN apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-key F42ED6FBAB17C654
+RUN apt-get update
 
 RUN apt install -y ros-noetic-pr2-arm-kinematics
 RUN apt-get install -y libjson-glib-1.0-0 libjson-glib-dev
