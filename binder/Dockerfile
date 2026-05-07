@@ -28,10 +28,10 @@ RUN source /opt/ros/noetic/setup.bash \
   && rosdep update \
   && rosdep install -y --ignore-src --from-paths ./ -r \
   && rosdep fix-permissions
-USER ${NB_USER}
 
 RUN apt-get install -y ros-noetic-costmap-2d
 
+USER ${NB_USER}
 RUN catkin build
 
 #============= Install extra software packages =============#
