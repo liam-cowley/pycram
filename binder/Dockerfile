@@ -24,10 +24,14 @@ RUN apt-get install -y libjson-glib-1.0-0 libjson-glib-dev
 # Build pycram workspace
 WORKDIR  ${PYCRAM_WS}
 USER root
-RUN rosdep update \
+RUN source /opt/ros/noetic/setup.bash \
+  && rosdep update \
   && rosdep install -y --ignore-src --from-paths ./ -r \
   && rosdep fix-permissions
 USER ${NB_USER}
+
+RUN apt-get install -y ros-noetic-costmap-2d
+
 RUN catkin build
 
 #============= Install extra software packages =============#
