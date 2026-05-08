@@ -9,16 +9,12 @@ repositories:
     version: master
   iai_pr2:
     type: git
-    url: git@github.com:code-iai/iai_pr2.git
+    url: https://github.com/code-iai/iai_pr2.git
     version: master
   pycram:
     type: git
     url: https://github.com/cram2/pycram.git
     version: dev
-  pr2_common:
-    type: git
-    url: https://@github.com/PR2/pr2_common.git
-    version: b34703bcca2b07cadbc3777d3c504c232a0c0c28
   kdl_ik_services:
     type: git
     url: https://github.com/cram2/kdl_ik_service.git
