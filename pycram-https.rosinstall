@@ -7,6 +7,10 @@ repositories:
     type: git
     url: https://github.com/code-iai/iai_robots.git
     version: master
+  iai_pr2:
+    type: git
+    url: https://github.com/code-iai/iai_pr2
+    version: master
   pycram:
     type: git
     url: https://github.com/cram2/pycram.git
